@@ -19,7 +19,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <!-- Your Styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -32,11 +32,10 @@
     </header>
 
     <main class="container">
-      <!-- Dynamic Project Grid -->
       <div class="project-grid" id="projectGrid"></div>
     </main>
 
-    <!-- Add Project Button (Visible only for Admin) -->
+    <!-- Add Project Button (Admin Only) -->
     <button id="addProjectBtn" class="admin-btn" style="display: block">
       + Add Project
     </button>
@@ -58,7 +57,7 @@
             placeholder="Project Description"
             required
           ></textarea>
-          <input type="text" id="projectImg" placeholder="Image URL" required />
+          <input type="file" id="projectImgFile" accept="image/*" required />
           <input
             type="text"
             id="projectLive"
