@@ -270,6 +270,67 @@ h1 {
 .modal__link--secondary:hover {
   background-color: rgba(3, 218, 198, 0.1);
 }
+.admin-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4cafef;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+
+.admin-btn:hover {
+  background-color: #399cd6;
+  transform: translateY(-2px);
+}
+
+.admin-btn:active {
+  transform: translateY(1px);
+}
+#addProjectModal .modal-content {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+#addProjectModal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#addProjectModal input,
+#addProjectModal textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#addProjectModal button {
+  background: #4cafef;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#addProjectModal button:hover {
+  background: #399cd6;
+}
 
 @media (min-width: 768px) {
   .project-grid {
