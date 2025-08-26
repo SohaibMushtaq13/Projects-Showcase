@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Showcase</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,10 +13,13 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
+    <!-- Your Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -28,132 +32,49 @@
     </header>
 
     <main class="container">
-      <div class="project-grid">
-        <article
-          class="project-card"
-          data-category="web"
-          data-modal-title="Inter-active Timetable"
-          data-modal-img=",/Assets/image.png"
-          data-modal-desc="Interactive Student Timetable A responsive weekly scheduling app
-              built with React and Tailwind CSS. This single-page solution helps
-              students and teachers manage their week with a dynamic,
-              drag-and-drop grid. It supports full CRUD, color customization,
-              PDF export, and local storage persistence. Safety modals prevent
-              accidental data loss."
-          data-modal-live="https://sohaibmushtaq13.github.io/Interactive-timetable/"
-          data-modal-github="https://github.com/SohaibMushtaq13/Interactive-timetable"
-        >
-          <div class="project-card__image-container">
-            <img
-              src="./Assets/image.png"
-              alt="Inter-active Timetable"
-              class="project-card__image"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__view-btn">View Project</div>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3 class="project-card__title">Student Timetable Generator</h3>
-            <p class="project-card__description">
-              Interactive Student Timetable A responsive weekly scheduling app
-              built with React and Tailwind CSS.
-            </p>
-          </div>
-        </article>
-        <article
-          class="project-card"
-          data-category="web"
-          data-modal-title="Family-Budget-Tracker"
-          data-modal-img="./AssetsScreenshot 2025-08-25 170004.png"
-          data-modal-desc="Family Budget Tracker is a simple and intuitive web app for
-              managing household finances. Track income, expenses, and savings
-              in real-time, set budgets, and analyze spending patterns to stay
-              on top of your family’s financial goals."
-          data-modal-live="https://sohaibmushtaq13.github.io/Family-Budget-Tracker/"
-          data-modal-github="https://github.com/SohaibMushtaq13/Family-Budget-Tracker"
-        >
-          <div class="project-card__image-container">
-            <img
-              src="./Assets/Screenshot 2025-08-25 170004.png"
-              alt="Inter-active Timetable"
-              class="project-card__image"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__view-btn">View Project</div>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3 class="project-card__title">Family-Budget-Tracker</h3>
-            <p class="project-card__description">
-              Family Budget Tracker is a simple and intuitive web app for
-              managing household finances. Track income, expenses, and savings
-              in real-time, set budgets, and analyze spending patterns to stay
-              on top of your family’s financial goals.
-            </p>
-          </div>
-        </article>
-        <article
-          class="project-card"
-          data-category="web"
-          data-modal-title="Prompt Vault"
-          data-modal-img="./Assets/Prompt Vault.png"
-          data-modal-desc="Prompt Vault is a curated collection of high-quality AI prompts for text, image, and creative workflows. Organize, explore, and reuse prompts to boost productivity and creativity. Ideal for developers, designers, and AI enthusiasts."
-          data-modal-live="https://sohaibmushtaq13.github.io/Prompt-Vault/"
-          data-modal-github="https://github.com/SohaibMushtaq13/Prompt-Vault"
-        >
-          <div class="project-card__image-container">
-            <img
-              src="./Assets/Prompt Vault.png"
-              alt="Prompt Vault"
-              class="project-card__image"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__view-btn">View Project</div>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3 class="project-card__title">Prompt Vault</h3>
-            <p class="project-card__description">
-              Prompt Vault is a curated collection of high-quality AI prompts
-              for text, image, and creative workflows. Organize, explore, and
-              reuse prompts to boost productivity and creativity. Ideal for
-              developers, designers, and AI enthusiasts.
-            </p>
-          </div>
-        </article>
-        <article
-          class="project-card"
-          data-category="web"
-          data-modal-title="Deadline Unifier"
-          data-modal-img="./Assets/Deadline Unifier.png"
-          data-modal-desc="Deadline Unifiee is a task and deadline management tool that centralizes all your due dates from multiple platforms into a single, easy-to-use dashboard. It helps you stay organized, track progress, and avoid missed deadlines."
-          data-modal-live="https://sohaibmushtaq13.github.io/Deadline-Unifier/"
-          data-modal-github="https://github.com/SohaibMushtaq13/Deadline-Unifier"
-        >
-          <div class="project-card__image-container">
-            <img
-              src="./Assets/Deadline Unifier.png"
-              alt="Deadline Unifier"
-              class="project-card__image"
-            />
-            <div class="project-card__overlay">
-              <div class="project-card__view-btn">View Project</div>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3 class="project-card__title">Deadline Unifier</h3>
-            <p class="project-card__description">
-              Deadline Unifiee is a task and deadline management tool that
-              centralizes all your due dates from multiple platforms into a
-              single, easy-to-use dashboard. It helps you stay organized, track
-              progress, and avoid missed deadlines.
-            </p>
-          </div>
-        </article>
-      </div>
+      <!-- Dynamic Project Grid -->
+      <div class="project-grid" id="projectGrid"></div>
     </main>
 
+    <!-- Add Project Button (Visible only for Admin) -->
+    <button id="addProjectBtn" class="admin-btn" style="display: none">
+      + Add Project
+    </button>
+
+    <!-- Add Project Modal -->
+    <div id="addProjectModal" class="modal">
+      <div class="modal-content">
+        <span class="modal__close" id="addProjectClose">&times;</span>
+        <h2>Add New Project</h2>
+        <form id="addProjectForm">
+          <input
+            type="text"
+            id="projectTitle"
+            placeholder="Project Title"
+            required
+          />
+          <textarea
+            id="projectDesc"
+            placeholder="Project Description"
+            required
+          ></textarea>
+          <input type="text" id="projectImg" placeholder="Image URL" required />
+          <input
+            type="text"
+            id="projectLive"
+            placeholder="Live Link (optional)"
+          />
+          <input
+            type="text"
+            id="projectGithub"
+            placeholder="GitHub Link (optional)"
+          />
+          <button type="submit">Add Project</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Project View Modal -->
     <div id="projectModal" class="modal">
       <div class="modal-content">
         <span class="modal__close">&times;</span>
@@ -181,8 +102,11 @@
       </div>
     </div>
 
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script -->
     <script src="script.js"></script>
   </body>
 </html>
