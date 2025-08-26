@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 50,
     autoAlpha: 0,
-    duration: 6,
+    duration: 1.2,
     stagger: 0.2,
     ease: "power3.out",
   });
